@@ -1,0 +1,20 @@
+---
+Diego:
+- !ruby/object:Task
+  content: Walk the dog
+  id: 28
+  created_at: 2016-10-25 09:50:40.709308000 +02:00
+  updated_at: 
+  completed: false
+- !ruby/object:Task
+  content: Buy the milk
+  id: 29
+  created_at: 2016-10-25 09:50:40.709313000 +02:00
+  updated_at: 
+  completed: false
+- !ruby/object:Task
+  content: Feed the fish
+  id: 30
+  created_at: 2016-10-25 09:50:40.709315000 +02:00
+  updated_at: 
+  completed: false
