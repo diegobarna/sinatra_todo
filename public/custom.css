@@ -1,0 +1,19 @@
+.pure-g {
+  letter-spacing: normal !important;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+label.pure-u-1 {
+  margin-top: 3%;
+}
+
+input.pure-u-1 {
+  margin-top: 1%;
+}
+
+.pure-button {
+  margin-top: 2%;
+}

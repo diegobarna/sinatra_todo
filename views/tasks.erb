@@ -1,0 +1,13 @@
+<% unless @tasks.nil? %>
+  <h2>You have tasks to do!</h2>
+<% else %>
+  <h2>Nothing to do, you can take a walk.</h2>
+<% end %>
+
+  <ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.content %> <em><%= task.time_ago %><em></li>
+  <% end %>
+  </ul>
+
+
