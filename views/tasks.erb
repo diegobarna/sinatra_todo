@@ -6,15 +6,16 @@
         <% if task.complete? %>
 
           <li class="pure-button">
-            <a href="/incomplete/<%= task.id %>">&#10003;</a>
+            <a href="/incomplete/<%= task.id %>" class="status done">&#10003;</a>
             <span class="completed"><strong><%= task.show_content %></strong> - 
             <em>Created at <%= task.created_at.strftime('%c') %></em></span>
           </li>
+          <a href="/delete/<%= task.id %>" class="button-warning pure-button">Delete</a>
         
         <% else %>
 
           <li class="pure-button">
-            <a href="/complete/<%= task.id %>">&#9675;</a>
+            <a href="/complete/<%= task.id %>" class="status">&#9675;</a>
             <strong><%= task.show_content %></strong> - 
             <em>Created at <%= task.created_at.strftime('%c') %></em>
           </li>

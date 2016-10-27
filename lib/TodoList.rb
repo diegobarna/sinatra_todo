@@ -30,6 +30,10 @@ class TodoList
     end
   end
 
+  def delete_task(id)
+    @tasks.delete_if{|task| task.id == id}
+  end
+
   def save
     @todo_store.transaction do 
       @todo_store[@username] = @tasks

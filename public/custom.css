@@ -6,6 +6,11 @@
   margin-top: 2%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 label.pure-u-1 {
   margin-top: 3%;
 }
@@ -27,12 +32,19 @@ nav li {
   margin: 1%;
 }
 
+em {
+  font-size: .8em;
+}
+
 .status {
   font-size: 1.5em;
   font-weight: bold;
   padding: 2px 10px 0px 0px;
   margin-left: -2px;
-  text-decoration: none;
+}
+
+.status.done {
+  color: green;
 }
 
 .font {
