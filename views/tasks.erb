@@ -1,13 +1,31 @@
-<% unless @tasks.nil? %>
-  <h2>You have tasks to do!</h2>
-<% else %>
-  <h2>Nothing to do, you can take a walk.</h2>
-<% end %>
+<div class="pure-u-1 font">
+  <% if @tasks.size != 0 %>
+    <h2>You have tasks to do!</h2>
+    <ul>
+      <% @tasks.each do |task| %>
+        <% if task.complete? %>
 
-  <ul>
-  <% @tasks.each do |task| %>
-    <li><%= task.content %> <em><%= task.time_ago %><em></li>
+          <li class="pure-button">
+            <a href="/incomplete/<%= task.id %>">&#10003;</a>
+            <span class="completed"><strong><%= task.show_content %></strong> - 
+            <em>Created at <%= task.created_at.strftime('%c') %></em></span>
+          </li>
+        
+        <% else %>
+
+          <li class="pure-button">
+            <a href="/complete/<%= task.id %>">&#9675;</a>
+            <strong><%= task.show_content %></strong> - 
+            <em>Created at <%= task.created_at.strftime('%c') %></em>
+          </li>
+
+        <% end %>
+      <% end %>
+    </ul>
+  <% else %>
+
+    <h2>Nothing to do, you can take a walk.</h2>
+
   <% end %>
-  </ul>
-
+</div>
 

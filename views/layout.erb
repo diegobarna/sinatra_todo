@@ -10,8 +10,14 @@
 </head>
 <body>
   <div class="pure-g">
-    <h1>Welcome to the ToDo App</h1>
-    
+    <nav class="pure-u-1">
+      <ul>
+        <li><a class="pure-button pure-button-primary" href="/tasks">Todo list</a></li>
+        <li><a class="pure-button pure-button-primary" href="/new_task">New task</a></li>
+        <li><a class="pure-button pure-button-primary" href="/logout">Log out</a></li>
+      </ul>
+    </nav>
+
     <%= yield %>
 
   </div>
